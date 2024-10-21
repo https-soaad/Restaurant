@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Sofadi+One&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        body {
+            overflow-x: hidden;
+
+        }
+
+        .section1 {
+            background-color: #F5F5DC;
+            padding: 0;
+            margin: 0;
+            min-height: 90vh;
+        }
+
+        .section1 header {
+            background-color: #EFE5D4;
+            font-family: "Acme", sans-serif;
+
+
+        }
+
+        .section1 .logo {
+            color: #352416;
+        }
+
+        .section1 .nav-link {
+            color: #8B6C52;
+            text-decoration: underline #8B6C52 2px;
+        }
+
+        .section1 .nav-link:hover {
+            text-decoration: underline #352416 2px;
+            color: #352416;
+        }
+
+        .section1 .navbar-toggler-icon {
+            background-color: #EFE5D4;
+        }
+
+        .section1 .landingBtn {
+            background-color: #352416;
+            color: #faf0de;
+            border-radius: 30px;
+            padding: 5px;
+            font-family: "Great Vibes", cursive;
+            font-weight: lighter;
+            font-size: 30px;
+            transition: transform 0.3s ease;
+
+
+        }
+
+        .section1 .landingBtn:hover {
+            transform: translateY(-10px);
+            background-color: #8B6C52;
+
+
+        }
+
+
+
+        .section1 .landingtext {
+            position: relative;
+            top: 10px;
+
+        }
+
+        .section1 .title1 {
+            font-family: "Great Vibes", cursive;
+            font-size: 60px;
+            font-weight: bold;
+        }
+
+        .section1 .title2 {
+            font-family: "Great Vibes", cursive;
+            font-size: 40px;
+
+        }
+
+        @media (max-width: 768px) {
+            .landingPhoto {
+                max-width: 90%;
+                /* Constrain the width of the image */
+                margin: 150px;
+                /*Add space above the image */
+
+
+            }
+        }
+
+        .landingPhoto {
+            /* filter: drop-shadow(30px 10px 6px #8B6C52); */
+            position: relative;
+            top: 2vh;
+            animation: fall 2s ease-out forwards;
+
+        }
+
+        @keyframes fall {
+            0% {
+                top: -20vh;
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+                /* Image becomes visible while falling */
+            }
+
+            100% {
+                top: 5vh;
+                /* Final position after falling (adjust this value to your needs) */
+                opacity: 1;
+                /* Image stays fully visible */
+            }
+        }
+
+        @media (max-width:576px) {
+            .landingPhoto {
+                top: 10vh;
+                animation: fall 2.5s ease-out forwards;
+            }
+
+            @keyframes fall {
+                0% {
+                    top: -30vh;
+                    /* Start from higher above for smaller screens */
+                    opacity: 0;
+                }
+
+                100% {
+                    top: 10vh;
+                    /* Final position for smaller screens */
+                    opacity: 1;
+                }
+            }
+        }
+
+
+
+
+
+        .section3 .menuP {
+            background-color: #8B6C52;
+            color: white;
+            font-family: "Great Vibes", cursive;
+            font-size: 30px;
+            width: 290px;
+            height: 60px;
+            margin-bottom: 50px;
+            position: relative;
+            bottom: 40px;
+            transition: transform 0.1s ease;
+
+
+
+        }
+
+        .section3 .menuP:hover {
+            transform: translate(5px);
+        }
+
+        .section4 {
+            background-color: #F5F5DC;
+            ;
+            border-top: 3px solid #352416;
+            padding-bottom: 50px;
+            padding-left: 0;
+            padding-right: 0;
+            margin: 0;
+        }
+
+        .section4 .form-control {
+            border: 1px solid #352416;
+            color: #352416;
+            font-family: "Acme", sans-serif;
+            border-radius: 0;
+        }
+
+        .section4 label {
+            color: #352416;
+            font-family: "Acme", sans-serif;
+        }
+
+        .section4 .btn-custom {
+            background-color: #352416;
+            color: #EFE5D4;
+            font-family: "Acme", sans-serif;
+        }
+
+        .section4 .btn-custom:hover {
+            background-color: #8B6C52;
+            color: white;
+        }
+
+        .section4 .headSec {
+            height: auto;
+            background-color: #352416;
+            color: white
+        }
+
+        .section4 .headSec h2 {
+            font-family: "Great Vibes", cursive;
+            padding: 10px;
+        }
+
+        .section6 {
+            color: #EFE5D4;
+            background-color: #352416;
+            font-family: "Acme", sans-serif;
+            height: 60vh;
+            padding: 0;
+            margin: 0;
+            object-fit: cover;
+        }
+
+        .section6 iframe {
+            margin-top: 20px;
+        }
+
+        .section6 .info {
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .section6 {
+                height: auto;
+                /* Set height to auto on small screens so it adjusts to content */
+                padding: 20px;
+                /* Add some padding if necessary */
+            }
+
+            .section6 iframe {
+                width: 350px;
+            }
+
+        }
+
+        /* .section6 .footerInfos {
+            margin-top: 50px;
+        } */
+
+        .section2 {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #F5F5DC;
+        }
+
+        .section2 .part1 {
+            background-color: #8B6C52;
+            width: 50%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .section2 .part1 h1 {
+            text-align: center;
+            color: white;
+            font-family: "Great Vibes", cursive;
+            font-size: 50px;
+            padding-top: 20px;
+            padding-bottom: 0;
+            font-weight: lighter;
+        }
+
+        .section2 .part1 h2 {
+            text-align: center;
+            color: white;
+            font-family: "Acme", sans-serif;
+            font-weight: lighter;
+            padding-bottom: 0;
+            padding-top: 0;
+
+
+        }
+
+        .section2 .part1 p {
+            text-align: center;
+            color: white;
+            font-family: "Great Vibes", cursive;
+            font-size: 25px;
+            padding-top: 20px;
+        }
+
+        .section2 .part1 span {
+
+            color: #352416;
+            font-family: "Acme", sans-serif;
+
+        }
+
+        .section2 .part2 {
+            width: 50%;
+        }
+
+        .section2 .part2 img {
+            max-width: 100%;
+            height: auto;
+
+        }
+
+        @media (max-width: 768px) {
+
+            .section2 .part1,
+            .section2 .part2 {
+                width: 100%;
+                /* Full width for both parts */
+            }
+
+            .section2 .part1 h1 {
+                font-size: 40px;
+                /* Adjust font size */
+            }
+
+            .section2 .part1 p {
+                font-size: 24px;
+                /* Adjust text size */
+            }
+        }
+
+        .section3 {
+            background-color: #F5F5DC;
+        }
+
+        .section3 img {
+            width: 100%;
+            aspect-ratio: 3/2;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+
+        }
+
+        .section3 img:hover {
+            transform: translateY(-10px);
+        }
+
+        .section3 h2 {
+            font-family: "Great Vibes", cursive;
+            color: #352416;
+            padding-top: 40px;
+            font-size: 50px;
+        }
+
+        .section3 h4 {
+            background-color: #8B6C52;
+            color: white;
+            position: relative;
+            bottom: 40px;
+            text-align: center;
+            padding: 7px;
+            font-family: "Great Vibes", cursive;
+
+        }
+
+        .section5 {
+            background-color: #EFE5D4;
+            padding: 20px;
+            margin: 0;
+            text-align: center;
+
+        }
+
+        .section5 .parent {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            /* If you want elements to wrap on small screens */
+        }
+
+        .section5 .parent .cardPhoto {
+            flex: 1;
+            cursor: pointer;
+        }
+
+        .section5 .parent .cardPhoto img,
+        .section5 .parent .cardPhoto video {
+            width: 100%;
+            aspect-ratio: 1/2;
+            object-fit: cover;
+
+        }
+
+        .section5 .parent .cardPhoto:hover {
+            flex: 2;
+
+        }
+
+        .section5 h1 {
+            color: #8B6C52;
+            font-family: "Great Vibes", cursive;
+        }
+
+        .section5 p {
+            color: #352416;
+            font-family: "Acme", sans-serif;
+            /* margin-top: 20px;
+            margin-bottom: 20px; */
+        }
+
+        .section5 .p2 {
+            padding-top: 30px;
+            color: #352416;
+            font-family: "Acme", sans-serif;
+
+        }
+
+        .success-notification {
+            z-index: 1000;
+            display: none;
+            background-color: #EFE5D4;
+            color: green;
+            width: 80%;
+            /* Make width responsive, 80% of the screen */
+            max-width: 450px;
+            /* But limit it to 450px on larger screens */
+            position: fixed;
+            bottom: 10vh;
+            /* 10% from the bottom of the viewport */
+            left: 50%;
+            /* Center horizontally */
+            transform: translateX(-50%);
+            /* Center horizontally using transform */
+            text-align: center;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* Add a slight shadow */
+        }
+
+        @media (max-width: 768px) {
+            .success-notification {
+                width: 90%;
+                /* Wider on smaller screens */
+                bottom: 5vh;
+                /* Closer to the bottom on small screens */
+            }
+        }
+
+        .section4 .error {
+            color: red;
+
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container-fluid section1">
+        <header>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a href="#" class="navbar-brand d-flex align-items-center">
+                        <img src="images/cutlery.png">
+                        <h5 class="ms-1 mb-0 logo">Tasty</h5>
+                    </a>
+                    <button type="button" class="navbar-toggler border-0 menubtn " data-bs-toggle="collapse"
+                        data-bs-target="#menuLinks">
+                        <span class="navbar-toggler-icon "></span>
+                    </button>
+                    <div class="navbar-collapse collapse" id="menuLinks">
+                        <ul class="navbar-nav ms-auto ">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link active">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#weServe" class="nav-link">We serve</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#about" class="nav-link">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#contacter" class="nav-link">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="row align-items-center">
+            <div class="col-lg-6 text-center text-lg-start mt-5 p-5 landingtext">
+                <h1 class="title1">A new taste A new experience</h1>
+                <p class="fw-blod title2">We care about the quality</p>
+
+                <div class="d-block align-items-start">
+                    <div class="row">
+                        <div class="col-12 col-md-4 mb-2">
+                            <a href="menu.html" class="btn btn-sm landingBtn w-100">Menu</a>
+                        </div>
+                        <div class="col-12 col-md-4 mb-2">
+                            <a href="#booking" class="btn btn-sm landingBtn w-100">Book a table</a>
+                        </div>
+                        <div class="col-12 col-md-4 mb-2">
+                            <a href="#gallery" class="btn btn-sm landingBtn w-100">Gallery</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-6 text-center mt-4 mt-lg-0">
+                <img src="images/beef.png" class="img-fluid mx-auto d-block landingPhoto" alt="Landing Image">
+            </div>
+        </div>
+    </section>
+    <section class="section2  container-fluid  d-flex flex-wrap" id="about">
+        <div class="part1">
+            <h1>Discover</h1>
+            <h2>Our story</h2>
+            <p> At <span>Tasty</span> we combine a passion for great food with a welcoming atmosphere. Led by our
+                Chef , our kitchen creates flavorful dishes using fresh, locally sourced ingredients. With a perfect
+                blend of tradition and creativity, we aim to offer a memorable dining experience for every guest.
+                Come and enjoy a meal crafted with care and culinary expertise!</p>
+
+        </div>
+        <div class="part2">
+            <img src="images/chef2.jpg" class="img-fluid">
+        </div>
+        </div>
+    </section>
+    <section class="section3 container-fluid" id="weServe">
+        <h2 class="text-center ">What we Serve </h2>
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <a href="menu.html">
+                        <img src="images/salmon.jpg" class="img-fluid" alt="Image 1"> </a>
+                    <h4>Our main dishes</h4>
+
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <a href="menu.html">
+                        <img src="images/juice.jpg" class="img-fluid" alt="Image 2"></a>
+                    <h4>Our refreshing drinks</h4>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <a href="menu.html">
+                        <img src="images/brouni.jpg" class="img-fluid" alt="Image 3"></a>
+                    <h4>Our delightful dessert </h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 text-center">
+            <a href="menu.html" class="btn btn-ms  menuP ">
+                Discover all the menu !
+            </a>
+        </div>
+        </div>
+    </section>
+    <section class="container-fluid section4 " id="booking">
+        <div class=" headSec">
+            <h2 class="form-title text-center">Booking a Table</h2>
+        </div>
+        <div class="container">
+            <div class="row align-items-center"> <!-- This row will have the form and image side by side -->
+
+                <!-- Form on the Left -->
+                <div class="col-lg-6 col-md-12">
+                    <div class="form-container">
+                        <!-- Title of the Form -->
+
+                        <form id="reservationForm">
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="fullName" class="form-label"><i class="bi bi-person"></i> Full
+                                        name</label>
+                                    <input type="text" class="form-control" id="fullName">
+                                    <span id="nameError" class="error "></span><br>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label"><i class="bi bi-envelope"></i>
+                                        Email</label>
+                                    <input type="email" class="form-control" id="email">
+                                    <span id="emailError" class="error "></span><br>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="phone" class="form-label"><i class="bi bi-telephone"></i>
+                                        Phone</label>
+                                    <input type="tel" class="form-control" id="phone">
+                                    <span id="phoneError" class="error "></span><br>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="bookingDate" class="form-label"><i class="bi bi-calendar"></i> Booking
+                                        date</label>
+                                    <input type="date" class="form-control" id="bookingDate">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="bookingTime" class="form-label"><i class="bi bi-clock"></i>
+                                        Booking time</label>
+                                    <input type="time" class="form-control" id="bookingTime">
+                                    <span id="timeError" class="error"></span><br>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="numGuests" class="form-label"><i class="bi bi-people"></i>
+                                        Number of guests</label>
+                                    <input type="number" class="form-control" id="numGuests" min="1" max="8">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="specialRequest" class="form-label"><i class="bi bi-chat-left-dots"></i></i>
+                                    Special request</label>
+                                <textarea class="form-control" id="specialRequest" rows="1"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-custom w-100">Book now</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- Image on the Right -->
+                <div class="col-lg-6 col-md-12 d-flex align-items-center justify-content-center py-3">
+                    <img src="images/tt.png" class="img-fluid restaurantTable p-5" alt="Restaurant Image">
+                </div>
+                <div class="alert alert-success fade show success-notification" id="successNotification" role="alert">
+                    <strong>Your reservation has been successful!</strong>
+                    <p>Your table is booked. Thank you!</p>
+                    <button type="button" class="btn-close" id="closeNotification" aria-label="Close"></button>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <section class="section5 container-fluid" id="gallery">
+        <h1 class="pt-4">Happy moments</h1>
+        <p>thanks to our team and our amazing clients for making those beautyful moments</p>
+        <div class="parent">
+            <div class="cardPhoto">
+                <video src="gallery/chefC.mp4" autoplay muted loop></video>
+            </div>
+            <div class="cardPhoto">
+                <img src="gallery/view1.jpg">
+            </div>
+            <div class="cardPhoto">
+                <img src="gallery/wom.jpg">
+            </div>
+            <div class="cardPhoto">
+                <img src="gallery/waiter.jpg">
+            </div>
+            <div class="cardPhoto">
+                <video src="gallery/eat.mp4" autoplay muted loop></video>
+            </div>
+            <div class="cardPhoto">
+                <img src="gallery/view2.jpg">
+            </div>
+            <div class="cardPhoto">
+                <img src="gallery/bur.jpg">
+            </div>
+        </div>
+        <p class="p2">Do not hesitate to try our restaurant and to contact us. You are welcome at any time.</p>
+
+    </section>
+
+    <section class="section6" id="contacter">
+        <div class="container footerInfos py-3">
+            <div class="row">
+                <!-- Map Section -->
+                <div class="col-md-6">
+
+                    <a href="#" class="navbar-brand d-flex align-items-center">
+                        <img src="images/cutlery.png">
+                        <h5 class="ms-1 mb-0 logo">Tasty</h5>
+                    </a>
+                    <div id="map" class="mb-4">
+                        <!-- Google Map Embed -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d220197.14822367163!2d-9.742555049028931!3d30.4196435025449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdb3b6e9daad1cc9%3A0xbcf8d0b78bf48474!2sAgadir%2080000!5e0!3m2!1sfr!2sma!4v1728821027956!5m2!1sfr!2sma"
+                            width="500" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade" class="col-md-12"></iframe>
+                    </div>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="col-md-6 info">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-geo-alt-fill"></i> 123 Tasty Restaurant Street, Agadir, Morroco</li>
+                        <li><i class="bi bi-telephone-fill"></i> +123 456 789</li>
+                        <li><i class="bi bi-envelope-at-fill"></i> info@Tastyrestaurant.com</li>
+                    </ul>
+                    <h5>Follow Us</h5>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="#" class="text-light"><i class="bi bi-facebook"></i></a>
+                        </li>
+                        <li class="list-inline-item"><a href="#" class="text-light"><i class="bi bi-instagram"></i></a>
+                        </li>
+                        <li class="list-inline-item"><a href="#" class="text-light"><i class="bi bi-youtube"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center ">
+            <p>&copy; 2024 Tasty Restaurant. All rights reserved.</p>
+        </div>
+    </section>
+    <script src="validation.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+</body>
+
+</html>
