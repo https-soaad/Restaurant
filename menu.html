@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasty Restaurant</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Sofadi+One&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+
+        .section1 {
+            background-color: #F5F5DC;
+            padding: 0;
+            margin: 0;
+        }
+
+        .section1 header {
+            background-color: #EFE5D4;
+            font-family: "Acme", sans-serif;
+
+        }
+
+        .section1 .logo {
+            color: #352416;
+        }
+
+        .section1 .nav-link {
+            color: #8B6C52;
+            text-decoration: underline #8B6C52 2px;
+        }
+
+        .section1 .nav-link:hover {
+            text-decoration: underline #352416 2px;
+            color: #352416;
+        }
+
+        .section1 .navbar-toggler-icon {
+            background-color: #EFE5D4;
+        }
+
+        .text1 {
+            background-color: #EFE5D4;
+            color: #352416;
+            font-family: "Great Vibes", cursive;
+        }
+
+        .form-control {
+            border: #352416 2px solid;
+            color: #352416;
+            background-color: #EFE5D4;
+        }
+
+        .form-select {
+            border: #352416 2px solid;
+            color: #352416;
+            background-color: #EFE5D4;
+        }
+
+        .cont {
+            border: 4px solid #352416;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .cont:hover {
+            transform: translateY(-10px);
+        }
+
+        .menu-item img {
+            width: 100%;
+            aspect-ratio: 3/2;
+            object-fit: cover;
+            border-bottom: #352416 4px solid;
+        }
+
+        .menu-item .card-body h5 {
+            color: #352416;
+            font-family: "Acme", sans-serif;
+            background-color: #EFE5D4;
+            text-align: center;
+        }
+
+        .card-text {
+            font-family: "Acme", sans-serif;
+            color: #352416;
+
+        }
+
+        .card-price {
+            font-size: 20px;
+        }
+
+        .card-price strong {
+            color: #d9534f;
+            font-size: 17px;
+        }
+
+        .section6 {
+            color: #EFE5D4;
+            background-color: #352416;
+            font-family: "Acme", sans-serif;
+            height: 60vh;
+            padding: 0;
+            margin: 0;
+            object-fit: cover;
+        }
+
+        .section6 iframe {
+            margin-top: 20px;
+        }
+
+        .section6 .info {
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .section6 {
+                height: auto;
+                /* Set height to auto on small screens so it adjusts to content */
+                padding: 20px;
+                /* Add some padding if necessary */
+            }
+
+            .section6 iframe {
+                width: 350px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container-fluid section1">
+        <header class="pb-4">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a href="main.html" class="navbar-brand d-flex align-items-center">
+                        <img src="images/cutlery.png">
+                        <h5 class="ms-1 mb-0 logo">Tasty</h5>
+                    </a>
+                    <button type="button" class="navbar-toggler border-0 menubtn " data-bs-toggle="collapse"
+                        data-bs-target="#menuLinks">
+                        <span class="navbar-toggler-icon "></span>
+                    </button>
+                    <div class="navbar-collapse collapse" id="menuLinks">
+                        <ul class="navbar-nav ms-auto ">
+                            <li class="nav-item">
+                                <a href="main.html#home" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="main.html#weServe" class="nav-link">We serve</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="main.html#about" class="nav-link">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#contacter" class="nav-link">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </section>
+    <div class="text-center text1">
+        <h1 class="display-4 p-2">Our Menu</h1>
+        <p class="lead p-4">Delicious food from around the world, crafted for your taste</p>
+    </div>
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <input type="text" id="searchInput" class="form-control mt-4" placeholder="Search for a dish...">
+            </div>
+            <div class="col-md-6">
+                <select id="categoryFilter" class="form-select mt-4">
+                    <option value="all">All Menu</option>
+                    <option value="Dishes">Dishes</option>
+                    <option value="Drinks">Drinks</option>
+                    <option value="Dessert">Desserts</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row" id="menuItems">
+
+            <!-- Dishes Section -->
+            <div class="col-md-4 menu-item" data-category="Dishes">
+                <div class="card mb-4 cont">
+                    <img src="images/Fettuccine Alfredo.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Fettuccine Alfredo</h5>
+                        <p class="card-text">Creamy pasta with parmesan cheese.</p>
+                        <span class="d-flex ">
+                            <p class="me-2 card-price">sm-<strong>15 Dhs</strong></p>
+                            <p class="me-2 card-price">md-<strong>25 Dhs</strong></p>
+                            <p class="me-2 card-price">lg-<strong>35 Dhs</strong></p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Drinks Section -->
+            <div class="col-md-4 menu-item" data-category="Drinks">
+                <div class="card mb-4 cont">
+                    <img src="images/icedCoffee.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Iced coffe</h5>
+                        <p class="card-text">refreshing beverage made by coffee.</p>
+                        <p class="card-price text-center"><strong>20 Dhs</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desserts Section -->
+            <div class="col-md-4 menu-item" data-category="Dessert">
+                <div class="card mb-4 cont">
+                    <img src="images/d1.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Pie</h5>
+                        <p class="card-text">Delicious pie made with strawberry.</p>
+                        <span class="d-flex ">
+                            <p class="me-2 card-price">sm-<strong>20 Dhs</strong></p>
+                            <p class="me-2 card-price">md-<strong>30 Dhs</strong></p>
+                            <p class="me-2 card-price">lg-<strong>45 Dhs</strong></p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 menu-item" data-category="Dessert">
+                <div class="card mb-4 cont">
+                    <img src="images/d2.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Mixed dessert</h5>
+                        <p class="card-text">Fusion of various sweet treats.</p>
+                        <span class="d-flex ">
+                            <p class="me-2 card-price">sm-<strong>25 Dhs</strong></p>
+                            <p class="me-2 card-price">md-<strong>35 Dhs</strong></p>
+                            <p class="me-2 card-price">lg-<strong>40 Dhs</strong></p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 menu-item" data-category="Dishes">
+                <div class="card mb-4 cont">
+                    <img src="images/jankao.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">cheese pie</h5>
+                        <p class="card-text">Made with a flaky crust with cheeses. </p>
+                        <span class="d-flex ">
+                            <p class="me-2 card-price">sm-<strong>15 Dhs</strong></p>
+                            <p class="me-2 card-price">md-<strong>25 Dhs</strong></p>
+                            <p class="me-2 card-price">lg-<strong>35 Dhs</strong></p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 menu-item" data-category="Drinks">
+                <div class="card mb-4 cont">
+                    <img src="images/coffe.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Coffee latte</h5>
+                        <p class="card-text">A smooth and creamy texture.</p>
+                        <p class="card-price text-center"><strong>30 Dhs</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 menu-item" data-category="Dessert">
+                <div class="card mb-4 cont">
+                    <img src="images/d3.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Cake</h5>
+                        <p class="card-text">coffee , vanilla flavor cake.</p>
+                        <p class="card-price text-center"><strong>25 Dhs</strong></p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-4 menu-item" data-category="Dishes">
+                <div class="card mb-4 cont">
+                    <img src="images/bbb.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Pasta</h5>
+                        <p class="card-text">Pasta with seasoned black beans.</p>
+                        <span class="d-flex ">
+                            <p class="me-2 card-price">sm-<strong>30 Dhs</strong></p>
+                            <p class="me-2 card-price">md-<strong>40 Dhs</strong></p>
+                            <p class="me-2 card-price">lg-<strong>55 Dhs</strong></p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 menu-item" data-category="Dessert">
+                <div class="card mb-4 cont">
+                    <img src="images/d4.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Fruit with cream</h5>
+                        <p class="card-text">Fruits served with a creamy sauce.</p>
+                        <p class="card-price text-center"><strong>22 Dhs</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 menu-item" data-category="Drinks">
+                <div class="card mb-4 cont">
+                    <img src="images/menth.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title"> Menthe Mojito </h5>
+                        <p class="card-text">Refreshing cocktail with mint flavor.</p>
+                        <p class="card-price text-center"><strong>30 Dhs</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 menu-item" data-category="Drinks">
+                <div class="card mb-4 cont">
+                    <img src="images/mojito.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title"> Iced tea </h5>
+                        <p class="card-text">Chilled drink made by tea and ice.</p>
+                        <p class="card-price text-center"><strong>30 Dhs</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 menu-item" data-category="Dishes">
+                <div class="card mb-4 cont">
+                    <img src="images/cccc.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Macaroni </h5>
+                        <p class="card-text"> Macaroni and savory tomato sauce.</p>
+                        <span class="d-flex ">
+                            <p class="me-2 card-price">sm-<strong>20 Dhs</strong></p>
+                            <p class="me-2 card-price">md-<strong>30 Dhs</strong></p>
+                            <p class="me-2 card-price">lg-<strong>40 Dhs</strong></p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 menu-item" data-category="Dessert">
+                <div class="card mb-4 cont">
+                    <img src="images/cripe.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Pancakes</h5>
+                        <p class="card-text">fluffy American pancakes.</p>
+                        <p class="card-price text-center"><strong>45 Dhs</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 menu-item" data-category="Dishes">
+                <div class="card mb-4 cont">
+                    <img src="images/salmon.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title"> Salmon </h5>
+                        <p class="card-text">flavorful and healthy dish.</p>
+                        <span class="d-flex ">
+                            <p class="me-2 card-price">sm-<strong>33 Dhs</strong></p>
+                            <p class="me-2 card-price">md-<strong>45 Dhs</strong></p>
+                            <p class="me-2 card-price">lg-<strong>60 Dhs</strong></p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 menu-item" data-category="Drinks">
+                <div class="card mb-4 cont">
+                    <img src="images/coca.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Soft drinks</h5>
+                        <p class="card-text">refreshing taste.</p>
+                        <p class="card-price text-center"><strong>15 Dhs</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 menu-item" data-category="Dishes">
+                <div class="card mb-4 cont">
+                    <img src="images/friedChicken.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Fried chicken</h5>
+                        <p class="card-text">Golden brown and crispy chicken.</p>
+                        <span class="d-flex ">
+                            <p class="me-2 card-price">sm-<strong>25 Dhs</strong></p>
+                            <p class="me-2 card-price">md-<strong>35 Dhs</strong></p>
+                            <p class="me-2 card-price">lg-<strong>40 Dhs</strong></p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 menu-item" data-category="Dishes">
+                <div class="card mb-4 cont">
+                    <img src="images/salad.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Salad</h5>
+                        <p class="card-text">variety of textures and colors Salad.</p>
+                        <span class="d-flex ">
+                            <p class="me-2 card-price">sm-<strong>15 Dhs</strong></p>
+                            <p class="me-2 card-price">md-<strong>25 Dhs</strong></p>
+                            <p class="me-2 card-price">lg-<strong>35 Dhs</strong></p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 menu-item" data-category="Drinks">
+                <div class="card mb-4 cont">
+                    <img src="images/juice.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Juice</h5>
+                        <p class="card-text">Extracted from fresh fruits.</p>
+                        <p class="card-price text-center"><strong>30 Dhs</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 menu-item" data-category="Dessert">
+                <div class="card mb-4 cont">
+                    <img src="images/glasse.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Ice cream</h5>
+                        <p class="card-text">Classic chocolate ice cream.</p>
+                        <p class="card-price text-center"><strong>24 Dhs</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 menu-item" data-category="Drinks">
+                <div class="card mb-4 cont">
+                    <img src="images/smothie.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Smoothies</h5>
+                        <p class="card-text">Fruit smoothies nutritious,refreshing. </p>
+                        <p class="card-price text-center"><strong>50 Dhs</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 menu-item" data-category="Dessert">
+                <div class="card mb-4 cont">
+                    <img src="images/brouni.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Brownis</h5>
+                        <p class="card-text">A dense and chewy texture.</p>
+                        <p class="card-price text-center"><strong>33 Dhs</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 menu-item" data-category="Dishes">
+                <div class="card mb-4 cont">
+                    <img src="images/burger.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Burger</h5>
+                        <p class="card-text">A versatile and beloved meal choice .</p>
+                        <p class="card-price text-center"><strong>36 Dhs</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 menu-item" data-category="Dishes">
+                <div class="card mb-4 cont">
+                    <img src="images/pizza.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Pizza</h5>
+                        <p class="card-text">Rich in cheese.</p>
+                        <span class="d-flex ">
+                            <p class="me-2 card-price">sm-<strong>15 Dhs</strong></p>
+                            <p class="me-2 card-price">md-<strong>25 Dhs</strong></p>
+                            <p class="me-2 card-price">lg-<strong>35 Dhs</strong></p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 menu-item" data-category="Dishes">
+                <div class="card mb-4 cont">
+                    <img src="images/tacos.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Tacos</h5>
+                        <p class="card-text">Traditional Mexican dish.</p>
+                        <p class="card-price text-center"><strong>50 Dhs</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="section6" id="contacter">
+        <div class="container footerInfos py-3">
+            <div class="row">
+                <!-- Map Section -->
+                <div class="col-md-6">
+
+                    <a href="#" class="navbar-brand d-flex align-items-center">
+                        <img src="images/cutlery.png">
+                        <h5 class="ms-1 mb-0 logo">Tasty</h5>
+                    </a>
+                    <div id="map" class="mb-4">
+                        <!-- Google Map Embed -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d220197.14822367163!2d-9.742555049028931!3d30.4196435025449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdb3b6e9daad1cc9%3A0xbcf8d0b78bf48474!2sAgadir%2080000!5e0!3m2!1sfr!2sma!4v1728821027956!5m2!1sfr!2sma"
+                            width="500" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade" class="col-md-12"></iframe>
+                    </div>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="col-md-6 info">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-geo-alt-fill"></i> 123 Tasty Restaurant Street, Agadir, Morroco</li>
+                        <li><i class="bi bi-telephone-fill"></i> +123 456 789</li>
+                        <li><i class="bi bi-envelope-at-fill"></i> info@Tastyrestaurant.com</li>
+                    </ul>
+                    <h5>Follow Us</h5>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="#" class="text-light"><i class="bi bi-facebook"></i></a>
+                        </li>
+                        <li class="list-inline-item"><a href="#" class="text-light"><i class="bi bi-instagram"></i></a>
+                        </li>
+                        <li class="list-inline-item"><a href="#" class="text-light"><i class="bi bi-youtube"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center ">
+            <p>&copy; 2024 Tasty Restaurant. All rights reserved.</p>
+        </div>
+    </section>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="menu.js"></script>
+   
+</body>
+
+</html>
