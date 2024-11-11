@@ -27,9 +27,10 @@ Key Features:
 
 ![login](https://github.com/user-attachments/assets/51ccb586-6478-496f-95c0-25ca8ea80e2f)
 
-![dashboard](https://github.com/user-attachments/assets/655a96e9-0ffe-4fad-8668-20c0d4673caf)
+![dashboard](https://github.com/user-attachments/assets/0b92d8fa-3f6c-4b34-8346-034fe82579a0)
 
-![edit](https://github.com/user-attachments/assets/9da5d839-bd76-41fe-b876-b00ce3f1bcf3)
+![edit](https://github.com/user-attachments/assets/bfde419c-047a-4683-8f79-7cc18e665d7f)
+
 
 
 
