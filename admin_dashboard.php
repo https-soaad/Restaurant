@@ -219,6 +219,8 @@ unset($_SESSION['error_message']);
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
                         <th>Date</th>
                         <th>Time</th>
                         <th>Guests</th>
@@ -232,6 +234,8 @@ unset($_SESSION['error_message']);
                     <tr>
                         <td data-label="ID"><?php echo $reservation['id']; ?></td>
                         <td data-label="Name"><?php echo htmlspecialchars($reservation['full_name']); ?></td>
+                        <td data-label="Email"><?php echo htmlspecialchars($reservation['email']); ?></td>
+                        <td data-label="Phone"><?php echo htmlspecialchars($reservation['phone']); ?></td>
                         <td data-label="Date"><?php echo date('M d, Y', strtotime($reservation['booking_date'])); ?></td>
                         <td data-label="Time"><?php echo date('h:i A', strtotime($reservation['booking_time'])); ?></td>
                         <td data-label="Guests"><?php echo $reservation['num_guests']; ?></td>
